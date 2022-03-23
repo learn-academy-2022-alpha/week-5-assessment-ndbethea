@@ -22,9 +22,11 @@ const secretCodeWord3 = "Eccentric";
 // Expected output: "3cc3ntr1c"
 
 // Pseudo Code
-// create a describe statement with name of function
-// create an in it statement describing what the method does
-// create expect statements for what needs to be tested
+// create a describe statement with name of function codedMessage
+// create an in it statement describing what the function does
+// create expect statement codedMessage to take in secretCodeWord01 to equal "L4ck4d41s1c4l"
+// create expect statement codedMessage to take in secretCodeWord02 to equal "G0bbl3dyg00k"
+// create expect statement codedMessage to take in secretCodeWord03 to equal "3cc3ntr1c"
 
 describe("codedMessage", () => {
   it("returns a coded message", () => {
@@ -37,9 +39,10 @@ describe("codedMessage", () => {
 // b) Create the function that makes the test pass.
 
 // Pseudo Code
-// create const of what we want to replace
+// create const code and input the listed vowels to equal the numbers they are to be replaced with
 // create const codedMessage
 // create a function that takes in a string of vowels
+// create a return that takes in a string and replaces the vowels with the above numbers
 // return values
 
 const code = {
@@ -69,9 +72,10 @@ const letterE = "e";
 // Expected output: ["Cherry", "Blueberry", "Peach"]
 
 // Pseudo Code
-// create a describe statement with name of function
-// create an in it statement describing what the method does
-// create expect statements for what needs to be tested
+// create a describe statement with name of function particularLetter
+// create an in it statement describing what the function does
+// create expect statement for particularLetter to take in arrayOfWords1 and letterA  to equal ["Apple", "Banana", "Plum", "Orange", "Kiwi"]
+// create expect statement for particularLetter to take in arrayOfWords2 and letterE  to equal ["Mango", "Cherry", "Apricot", "Blueberry", "Peach"]
 
 describe("particularLetter", () => {
   it("takes in an array of words and a single letter and returns all the words that contain that particular letter", () => {
@@ -92,9 +96,10 @@ describe("particularLetter", () => {
 
 // Pseudo Code
 // create const particularLetter
-// create a function that takes in an array and letter
-// use .filter method, .toLowerCase and .includes notation
-// return values
+// create a function that takes in an array of words and a letter
+// create a return statement that takes in an array of words
+// use .filter to filter out specific letters
+// return value to lower case and include our replaced vowels
 
 const particularLetter = (array, letter) => {
   return array.filter((value) => value.toLowerCase().includes(letter));
@@ -112,9 +117,11 @@ const hand3 = [5, 5, 5, 5, 4];
 // Expected output: false
 
 // Pseudo Code
-// create a describe statement with name of function
-// create an in it statement describing what the method does
-// create expect statements for what needs to be tested
+// create a describe statement with name of function fullHouseTester
+// create an in it statement describing what the function does
+// create expect statement for fullHouseTester to take in the array of hand1 to equal true
+// create expect statement for fullHouseTester to take in the array of hand2 to equal false
+// create expect statement for fullHouseTester to take in the array of hand3 to equal false
 
 describe("fullHouseTester", () => {
   it("takes in an array of 5 numbers and determines whether or not the array is a full house", () => {
@@ -129,9 +136,9 @@ describe("fullHouseTester", () => {
 // Pseudo Code
 // create const fullHouseTester
 // create a function that takes in an array
-// use .map to pull in values
-// use . filter
-// create a return of the hand counts
+// create a variable handCount to equal array.map with parameters v, i, and array
+// use .filter with parameter strictly equal to v
+// create a return statement for handCount using .includes with a numbered parameter set
 
 const fullHouseTester = (arr) => {
   let handCount = arr.map((v, i, arr) => arr.filter((b) => b === v).length);

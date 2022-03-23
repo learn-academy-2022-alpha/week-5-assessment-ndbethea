@@ -10,6 +10,16 @@ letter_o = 'o'
 letter_t = 't'
 # Expected output: ['tea', 'water', 'soda water']
 
+def partlet array, letter
+    array.select do |value|
+        if value.include?(letter)
+            p value
+        end
+    end
+end
+
+partlet(beverages_array, letter_o)
+partlet(beverages_array, letter_t)
 
 # -------------------2) Create a method that takes in an array of numbers and returns the sum of the numbers. Use the test variables provided.
 
